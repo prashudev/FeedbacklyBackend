@@ -105,3 +105,5 @@ and store the data in the csv file
 }
 
 Make sure to use python 3.12
+Add code to prevent CORS error when endpoint is accessed from different domain
+write simple unit test cases
