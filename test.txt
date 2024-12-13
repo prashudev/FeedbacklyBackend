@@ -1,0 +1,23 @@
+Code is deployed on render: https://feedbacklybackend.onrender.com
+
+1. https://feedbacklybackend.onrender.com/docs: hitting this end point opens a swagger documentation
+
+2. When hitting POST: https://feedbacklybackend.onrender.com/api/v1/submitfeedback
+use below JSON format for testing
+{
+  "userName": "Prashanth",
+  "feedback": [
+    {
+      "question": "To what extent do you believe Gen AI can replace traditional coding methods?",
+      "rating": 3
+    },
+    {
+      "question": "How likely will you adopt Gen AI tools in your current development process?",
+      "rating": 3
+    },
+    {
+      "question": "How likely are you to replace your morning coffee with AI-generated code?",
+      "rating": 3
+    }
+  ]
+}
