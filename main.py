@@ -10,8 +10,8 @@ from pathlib import Path
 # Load environment variables
 load_dotenv()
 
-# Configure Gemini API
-GOOGLE_API_KEY = "AIzaSyAQ4j-3ZaKNZQzcPevVCIlPwqNPssQgHIo"
+# Get the API key from the environment
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 if not GOOGLE_API_KEY:
     raise ValueError("GOOGLE_API_KEY not found in environment variables")
 
