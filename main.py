@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
 import google.generativeai as genai
@@ -22,6 +23,15 @@ app = FastAPI(
     title="Feedbackly API",
     description="A FastAPI application for collecting and analyzing feedback using Google's Gemini AI",
     version="1.0.0"
+)
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
 )
 
 class GeminiResponse(BaseModel):
